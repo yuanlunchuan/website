@@ -5,10 +5,10 @@
 
 	<packaging>war</packaging>
 	<groupId>netgloo</groupId>
-	<artifactId>spring-boot-mysql-springdatajpa-hibernate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>website</artifactId>
+	<version>1.1</version>
 
-	<name>spring-boot-mysql-springdatajpa-hibernate</name>
+	<name>website</name>
 	<description>app web site</description>
 
 	<parent>

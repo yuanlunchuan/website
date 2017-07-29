@@ -41,7 +41,6 @@
     <![endif]-->
   </head>
   <body data-spy="scroll" data-target=".navbar-fixed-top" >
-    
 <!-- Header start -->
 	<header id="header" role="banner" >
 		<nav class="navbar navbar-default navbar-fixed-top"  id="tf-menu">
@@ -275,7 +274,7 @@
                     </div>
                     <div class="col-md-3 col-xs-12 col-sm-6 columns">
                         <div class="facts-wrap">
-                            <i class="icon icon-envelope"></i>
+                            <i class="fa fa-clock-o"></i>
                             <div class="fact-content">
                                 <h6>运营时间</h6>
                                 <div class="line"></div>
@@ -589,36 +588,36 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<form class="contact-inner">
+					<form class="contact-inner" method="post" action="#" th:action="@{/leaveMessages}">
 						<div class="row">
 							<div class="col-md-4">
 								<div class="form-group">
 									<label > 名字</label>
-									<input type="text" class="form-control" placeholder="名字"/>
+									<input type="text" class="form-control" placeholder="名字" name="name" style="color:#ffffff;"/>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
 									<label > 邮箱</label>
-									<input type="text" class="form-control" placeholder="email"/>
+									<input type="text" class="form-control" placeholder="email" name="email" style="color:#ffffff;"/>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label > 主题</label>
-									<input type="text" class="form-control" placeholder="主题"/>
+									<label > 标题</label>
+									<input type="text" class="form-control" placeholder="标题" name="title" style="color:#ffffff;"/>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
 									<label > 内容</label>
-									<textarea name="" id="" cols="30" rows="8" class="form-control" placeholder="message"></textarea>
+									<textarea id="" cols="30" rows="8" class="form-control" placeholder="留言内容" name="content" style="color:#ffffff;"></textarea>
 								</div>
 							</div>
 						</div> <!-- row end -->
 						<div class="row">
 							<div class="col-md-12 text-center">
-								<button class="btn btn-default">提交留言</button>
+								<button id="submit-button" class="btn btn-default" type="submit">提交留言</button>
 							</div>
 						</div>
 					</form>
@@ -713,7 +712,10 @@
         ], {
             fade: 950,
             duration: 10000
-        });  
+        });
+        $("#submit-button").on('click', function(event){
+        	alert("提交成功");
+        });
 
     </script>
     <script>
